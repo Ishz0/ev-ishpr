@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>EV Chargers</title>
+<title>PraIsh</title>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
@@ -11,7 +11,7 @@
 <body>
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
   <!-- Brand -->
-  <a class="navbar-brand" href="#">EV Chargers</a>
+  <a class="navbar-brand" href="#">PraIsh</a>
 
   <!-- Toggler/collapsibe Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -28,8 +28,20 @@
         <a class="nav-link" th:href="@{/chargers}">Schedule a Charger</a>
       </li>
     </ul>
+    <ul class="nav navbar-nav " >
+		<li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
+	</ul>
   </div>
 </nav>
+
+<br>
+
+	<div class="container">
+		<h1>Hey! Welcome <span sec:authentication="principal.username"> User</span></h1>
+		<h4> Here's your charger/s list</h4>
+	</div>
+	
+<br>
 
 	<div class ="container">
 		<div class = "row">
