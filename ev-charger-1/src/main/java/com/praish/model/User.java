@@ -19,10 +19,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-@Getter 
-@Setter
 @Data
-@ToString
 @Entity
 @Table(name="Users", uniqueConstraints=@UniqueConstraint(columnNames="email"))
 public class User {

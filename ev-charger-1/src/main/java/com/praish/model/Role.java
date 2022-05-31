@@ -13,10 +13,7 @@ import lombok.ToString;
 
 @Entity
 @Table(name="roles")
-@Getter
-@Setter
 @Data
-@ToString
 public class Role {
 	
 	@Id

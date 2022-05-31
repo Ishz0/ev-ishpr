@@ -11,16 +11,11 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
 
 @Entity
 @Table(name="Chargers")
-@Getter
-@Setter
+
 @Data
-@ToString
 public class Charger {
 	
 	@Id 
